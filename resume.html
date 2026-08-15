@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreyas Sanjay Pawar — Resume</title>
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --muted:#4a4a4a;
+    --accent:#1f4e79;
+    --rule:#c9c9c9;
+    --bg:#f2f2f2;
+    --paper:#ffffff;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    padding:32px 16px;
+    background:var(--bg);
+    font-family:'Georgia','Times New Roman',serif;
+    color:var(--ink);
+  }
+
+  .toolbar{
+    max-width:800px;
+    margin:0 auto 16px;
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+  }
+
+  .toolbar button{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12.5px;
+    padding:8px 16px;
+    border-radius:6px;
+    border:1px solid var(--accent);
+    background:var(--accent);
+    color:#fff;
+    cursor:pointer;
+  }
+
+  .toolbar button:hover{
+    background:#173c5c;
+  }
+
+  .page{
+    max-width:800px;
+    min-height:1035px;
+    margin:0 auto;
+    background:var(--paper);
+    padding:36px 44px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  header{
+    text-align:center;
+    margin-bottom:8px;
+  }
+
+  h1{
+    margin:0 0 4px;
+    font-size:23.5px;
+    letter-spacing:1px;
+    font-weight:700;
+  }
+
+  .role{
+    font-style:italic;
+    font-size:12.5px;
+    color:var(--muted);
+    margin:0 0 6px;
+  }
+
+  .contact{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:var(--muted);
+  }
+
+  .contact a{
+    color:var(--accent);
+    text-decoration:none;
+  }
+
+  .contact a:hover{
+    text-decoration:underline;
+  }
+
+  .divider{
+    border:none;
+    border-top:1.5px solid var(--accent);
+    margin:10px 0 12px;
+  }
+
+  section{
+    margin-bottom:10px;
+  }
+
+  h2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.2px;
+    color:var(--accent);
+    margin:0 0 6px;
+    padding-bottom:2px;
+    border-bottom:1px solid var(--rule);
+  }
+
+  p.objective{
+    font-size:12.5px;
+    line-height:1.4;
+    margin:0;
+    text-align:justify;
+  }
+
+  .skills-grid{
+    font-size:12.5px;
+    line-height:1.5;
+  }
+
+  .skills-grid div{
+    margin-bottom:1px;
+  }
+
+  .skills-grid b{
+    color:var(--ink);
+  }
+
+  .project{
+    margin-bottom:9px;
+  }
+
+  .project:last-child{
+    margin-bottom:0;
+  }
+
+  .project-title-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:4px 10px;
+  }
+
+  .project-title{
+    font-size:13px;
+    font-weight:700;
+  }
+
+  .project-stack{
+    font-style:italic;
+    font-weight:400;
+    font-size:11.5px;
+    color:var(--muted);
+  }
+
+  .project-link{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    white-space:nowrap;
+  }
+
+  .project-link a{
+    color:var(--accent);
+    text-decoration:none;
+  }
+
+  .project-link a:hover{
+    text-decoration:underline;
+  }
+
+  ul{
+    margin:4px 0 0;
+    padding-left:18px;
+  }
+
+  li{
+    font-size:12px;
+    line-height:1.35;
+    margin-bottom:2px;
+    text-align:justify;
+  }
+
+  .edu-school{
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:2px;
+  }
+
+  .edu-degree{
+    font-style:italic;
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  .cert-item, .lead-item{
+    font-size:12px;
+    line-height:1.4;
+    margin-bottom:3px;
+  }}
+
+  .cert-item:last-child, .lead-item:last-child{
+    margin-bottom:0;
+  }
+
+  .lead-item b{
+    font-weight:700;
+  }
+
+  @media print{
+    body{
+      background:#fff;
+      padding:0;
+      -webkit-print-color-adjust:exact;
+      print-color-adjust:exact;
+    }
+    .toolbar{
+      display:none;
+    }
+    .page{
+      box-shadow:none;
+      max-width:100%;
+      min-height:0;
+      padding:0.4in 0.55in;
+      margin:0;
+    }
+    @page{
+      size:A4;
+      margin:0;
+    }
+  }
+
+  @media (max-width:600px){
+    .page{
+      padding:28px 22px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <div class="page">
+
+    <header>
+      <h1>SHREYAS SANJAY PAWAR</h1>
+      <p class="role">Computer Science Engineering (AI &amp; ML)</p>
+      <p class="contact">
+        <a href="mailto:pawarshreyas425@gmail.com">pawarshreyas425@gmail.com</a> &nbsp;|&nbsp;
+        <a href="tel:+917020467759">+91 7020467759</a> &nbsp;|&nbsp;
+        <a href="https://github.com/shrs425p" target="_blank" rel="noopener">github.com/shrs425p</a> &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/shreyas-pawar-42064938a" target="_blank" rel="noopener">linkedin.com/in/shreyas-pawar</a>
+      </p>
+    </header>
+
+    <hr class="divider">
+
+    <section>
+      <h2>OBJECTIVE</h2>
+      <p class="objective">Third-year B.E. Computer Science (AI &amp; ML) student with hands-on experience building full-stack and AI-driven applications, including a multi-provider AI recruitment system and a Flutter-based college app. Seeking an internship or entry-level opportunity in Software Development or AI/ML.</p>
+    </section>
+
+    <section>
+      <h2>TECHNICAL SKILLS</h2>
+      <div class="skills-grid">
+        <div><b>Languages:</b> Python, Dart, JavaScript</div>
+        <div><b>Backend &amp; APIs:</b> FastAPI, REST APIs, Gemini API, OpenAI API, Nvidia API, Ollama</div>
+        <div><b>Frontend &amp; Mobile:</b> Next.js, React, Flutter</div>
+        <div><b>Tools &amp; Platforms:</b> Git, GitHub, Firebase / Google Sign-In, Windows dev environment</div>
+        <div><b>Core Concepts:</b> OCR, NLP, AI Model Integration &amp; Switching, Mobile App Development</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>KEY PROJECTS</h2>
+
+      <div class="project">
+        <div class="project-title-row">
+          <span class="project-title">AI Recruitment System <span class="project-stack">| Python, FastAPI, Next.js/React, Gemini API, OpenAI API, Nvidia API, Ollama</span></span>
+          <span class="project-link"><a href="https://github.com/shrs425p/AI-Recruitment-System" target="_blank" rel="noopener">GitHub ↗</a></span>
+        </div>
+        <ul>
+          <li>Building an AI-powered recruitment platform with a FastAPI backend and Next.js/React frontend, evolving from an initial CLI version to a full web application.</li>
+          <li>Designed a multi-provider architecture supporting Gemini, OpenAI, Nvidia, and Ollama, with dynamic model selection and automatic switching between providers.</li>
+          <li>Structured the codebase into focused modules (NLP, OCR, parser, matcher, candidate, database) for maintainability; planned an interview management module.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-title-row">
+          <span class="project-title">Birthday Reminder <span class="project-stack">| Node.js, Express, SQLite, JWT, Nodemailer, node-cron</span></span>
+          <span class="project-link"><a href="https://github.com/shrs425p/Birthday-Reminder" target="_blank" rel="noopener">GitHub ↗</a></span>
+        </div>
+        <ul>
+          <li>Built a full-stack web application for tracking student birthdays, with public Home and Student panels and an Admin panel for CRUD, request approvals, and scheduling.</li>
+          <li>Developed a Node.js/Express backend with SQLite storage, JWT authentication, and AES-256-CBC encryption for stored SMTP credentials.</li>
+          <li>Implemented automated birthday email notifications using Nodemailer and node-cron, with a customizable template and configurable scheduler.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-title-row">
+          <span class="project-title">Patient Record System <span class="project-stack">| Python, Flask, MySQL, Jinja2, Werkzeug — DBMS Mini Project</span></span>
+          <span class="project-link"><a href="https://docs.google.com/document/d/1fJdk8m5574sipOT3TQmtMXTN9Vb-fLdFMrvQ9jHJdQo/edit?usp=drivesdk" target="_blank" rel="noopener">Project Report ↗</a></span>
+        </div>
+        <ul>
+          <li>Built a role-based hospital management portal with a Flask backend and a normalized MySQL schema spanning patients, doctors, appointments, and medical records.</li>
+          <li>Enforced referential integrity with primary/foreign key constraints and cascading deletes; implemented full CRUD across all four modules and secured admin access with Werkzeug password hashing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>EDUCATION</h2>
+      <div class="edu-school">Gharda Institute of Technology</div>
+      <div class="edu-degree">Bachelor of Engineering, Computer Science Engineering (AI &amp; ML) — Third Year (TE)</div>
+    </section>
+
+    <section>
+      <h2>CERTIFICATIONS</h2>
+      <div class="cert-item">Database Management System — SEED Infotech Ltd., Pune, in association with Gharda Institute of Technology (Jan–Feb 2026)</div>
+      <div class="cert-item">Full Stack Java Introductory Course — SEED Infotech Ltd., Pune, in association with Gharda Institute of Technology (Jul–Aug 2025)</div>
+      <div class="cert-item">AI for Students: Build Your Own Generative AI Model — NxtWave (Aug 2025)</div>
+    </section>
+
+    <section style="margin-bottom:0;">
+      <h2>LEADERSHIP &amp; ACTIVITIES</h2>
+      <div class="lead-item"><b>Team Lead, CodeBits Hackathon — Gharda Institute of Technology (2025):</b> Led a 4-member team at an inter-college hackathon with participants from multiple cities, pitching the concept behind the AI Recruitment System.</div>
+    </section>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadPDF() {
+      const element = document.querySelector('.page');
+      const opt = {
+        margin: 10,
+        filename: 'Shreyas_Pawar_Resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
+</body>
+</html>
